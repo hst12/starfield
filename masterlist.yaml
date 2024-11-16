@@ -617,46 +617,204 @@ plugins:
 
 ###### Anything new can go after this (If you're not sure where to put it) ######
 
-###### Vehicles - New ######
-name: 'grav_79_z.esm'
-url:
-  - link: 'https://creations.bethesda.net/en/starfield/details/569b05ba-0c48-4196-a240-7b26f80be34f'
-    name: 'GRAV-79 (Hovercraft Vehicle)'
-inc: ['bubegg.esm']
-
-name: 'bubegg.esm'
-url:
-  - link: 'https://creations.bethesda.net/en/starfield/details/9320bd94-1eaf-408d-b614-52dce852db6d'
-    name: 'Sub-Orbital Shuttle SOS-8'
-inc: ['grav_79_z.esm']
-
-name: 'akiracer.esm'
-url:
-  - link: 'https://creations.bethesda.net/en/starfield/details/110b7f99-d1eb-4cf8-9031-dda8ec17efc2'
-    name: 'AkiRacer'
-inc:
-  - 'grav_79_z.esm'
-  - 'bubegg.esm'
-
-###### Vehicles - Mods to Existing Vehicles ######
-
-###### Ship Vendor Framework ######
-name: 'shipvendorframework.esm'
-url:
-  - link: 'https://www.nexusmods.com/starfield/mods/10057'
-    name: 'Ship Vendor Framework'
-
-###### Ship Vendor Framework - New Ships ######
-name: 'hstships.esm'
-url:
-  - link: 'https://www.nexusmods.com/starfield/mods/10834'
-    name: 'Ships by hst using Ship Vendor Framework'
-  - link: 'https://creations.bethesda.net/en/starfield/details/4463fcf3-3834-4d4b-80c5-3ea2ecbeafd3'
-    name: 'Ships by hst using Ship Vendor Framework'
-after: ['shipvendorframework.esm']
-req:
+  - name: 'akiracer.esm'
+    url:
+      - link: 'https://creations.bethesda.net/en/starfield/details/110b7f99-d1eb-4cf8-9031-dda8ec17efc2'
+        name: 'AkiRacer'
+    group: 'Vehicles - New'
+    inc:
+      - 'grav_79_z.esm'
+      - 'bubegg.esm'
+  - name: 'alternate vasco.esm'
+    group: 'NPC Behaviour & Dialogue'
+    after: ['byecora.esm']
+  - name: 'ancientmarinerextended.esm'
+    url:
+      - link: 'https://creations.bethesda.net/en/starfield/details/f12d2d5c-14a6-481d-8d07-8717af173dfd'
+        name: 'Ancient Mariner Extended'
+    group: 'Ship Modules'
+    after: ['sfbgs009.esm']
+    req:
+      - name: 'sfbgs009.esm'
+        display: 'Ancient Mariner Module'
+  - name: 'andreja_outfit_z.esm'
+    group: 'Late Fixes & Changes'
+  - name: 'astrolabe.esm'
+    group: 'User Interface'
+  - name: 'better crowd citizens_ck2.esm'
+    group: 'NPC Appearance'
+  - name: 'bubegg.esm'
+    url:
+      - link: 'https://creations.bethesda.net/en/starfield/details/9320bd94-1eaf-408d-b614-52dce852db6d'
+        name: 'Sub-Orbital Shuttle SOS-8'
+    group: 'Vehicles - New'
+    inc: ['grav_79_z.esm']
+  - name: 'byecora.esm'
+    group: 'NPC Behaviour & Dialogue'
+    after: ['shutupcora.esm']
+  - name: 'color filter remover.esm'
+    group: 'Visual Effects'
+    inc: ['starluminous - lighting overhaul.esm']
+  - name: 'cwhdigipickshortcut.esm'
+    group: 'Gameplay Changes'
+  - name: 'deluxedynamicboostpacks.esm'
+    group: 'Gameplay Changes'
+    after: ['starfield billboards and posters.esm']
+  - name: 'easy_temples.esm'
+    group: 'Gameplay Changes'
+  - name: 'eit_clothiers_z.esm'
+    group: 'New clothing or armour'
+  - name: 'grav_79_z.esm'
+    url:
+      - link: 'https://creations.bethesda.net/en/starfield/details/569b05ba-0c48-4196-a240-7b26f80be34f'
+        name: 'GRAV-79 (Hovercraft Vehicle)'
+    group: 'Vehicles - New'
+    inc: ['bubegg.esm']
+  - name: 'hstships.esm'
+    url:
+      - link: 'https://www.nexusmods.com/starfield/mods/10834'
+        name: 'Ships by hst using Ship Vendor Framework'
+      - link: 'https://creations.bethesda.net/en/starfield/details/4463fcf3-3834-4d4b-80c5-3ea2ecbeafd3'
+        name: 'Ships by hst using Ship Vendor Framework'
+    group: 'SVF Ships'
+    after: ['shipvendorframework.esm']
+    req:
+      - name: 'shipvendorframework.esm'
+        display: 'Ship Vendor Framework'
+    msg:
+      - type: say
+        content: 'Requires Ship Vendor Framework'
+  - name: 'hstShips2.esm'
+    url:
+      - link: ''
+        name: 'hst Shp Pack 2 using Ship Vendor Framework'
+    group: 'SVF Ships'
+  - name: 'improvedfollowerbehavior.esm'
+    group: 'NPC Behaviour & Dialogue'
+    after:
+      - 'thegangsallhere.esm'
+      - 'shutupcora.esm'
+      - 'byecora.esm'
+  - name: 'Infinite Car Boost.esm'
+    group: 'Vehicle Mods'
+    after: ['better crowd citizens_ck2.esm']
+  - name: 'kinggathcreations_legendary.esm'
+    group: 'Gameplay Changes'
+  - name: 'KZ_AIO.esm'
+    url:
+      - link: 'https://www.nexusmods.com/starfield/mods/11471'
+        name: 'KZ Aggregation of Scraps'
+    group: 'New clothing or armour'
+  - name: 'lin.esm'
+    group: 'NPC Appearance'
+    after:
+      - 'starfield billboards and posters.esm'
+  - name: 'mercurypenthousefurnished.esm'
+    group: 'Player Homes'
+  - name: 'mordrid-easy-lockpick.esm'
+    group: 'Gameplay Changes'
+  - name: 'NASA Lunar Rover.esm'
+    group: 'Vehicle Replacers'
+  - name: 'NASA Lunar Rover.esp'
+    group: 'Vehicle Replacers'
+  - name: 'neon_entertainers_z.esm'
+    group: 'Armour and Clothing Replacers'
+  - name: 'ng-20 thruster animation fix.esm'
+    group: 'Fixes & Resources'
+  - name: 'NG-20 Thruster Animation Patch.esm'
+    group: 'Ships'
+  - name: 'nk_andrejawalk.esm'
+    group: 'NPC Appearance'
+  - name: 'noel_replacer_z.esm'
+    group: 'Armour and Clothing Replacers'
+  - name: 'nsfnafss.esm'
+    group: 'UI'
+  - name: 'nsfnafss1.2.esm'
+    group: 'User Interface'
+  - name: 'oddzealot_constellationtanktops.esm'
+    group: 'New clothing or armour'
+  - name: 'outfits_swimsuits.esm'
+    group: 'New clothing or armour'
+  - name: 'praxisui inventory.esm'
+    group: 'User Interface'
+  - name: 'Relaxed Jetpacks Sound.esm'
+    group: 'Sound Replacers'
+  - name: 'rev-8-pro.esm'
+    group: 'Vehicle Mods'
+  - name: 'rev-8-pro_nomusic.esm'
+    group: 'Vehicle Mods'
+  - name: 'rev8_improved.esm'
+    group: 'Vehicle Mods'
+  - name: 'rev8_improved_v3.esm'
+    group: 'Vehicle Mods'
+  - name: 'RRLD - Rabbit''s Real Lights Dazra.esm'
+    group: 'Late Loaders'
+  - name: 'SarahMorgan.esm'
+    url:
+      - link: 'https://www.nexusmods.com/starfield/mods/11760/'
+        name: 'Ultimate Sarah - Replacer'
+    group: 'NPC Appearance'
+  - name: 'sarah_replacer_z.esm'
+    group: 'Armour and Clothing Replacers'
+  - name: 'sci-fi loading screens mega pack.esm'
+    group: 'Visuals'
+  - name: 'sedwtvwextreme.esm'
+    group: 'UI'
+  - name: 'sedwtvwextreme1.1.esm'
+    group: 'User Interface'
+  - name: 'sedwtvwfpivaruun.esm'
+    group: 'UI'
+    after: ['starfield billboards and posters.esm']
+  - name: 'shades_glowy_stuff.esm'
+    group: 'Gameplay Changes'
+  - name: 'shades_vehicle_tuner.esm'
+    group: 'Vehicle Mods'
+  - name: 'ship power fix.esm'
+    group: 'Fixes & Resources'
   - name: 'shipvendorframework.esm'
-    display: 'Ship Vendor Framework'
-msg:
-  - type: say
-    content: 'Requires Ship Vendor Framework'
+    url:
+      - link: 'https://www.nexusmods.com/starfield/mods/10057'
+        name: 'Ship Vendor Framework'
+    group: 'Ship Vendor Framework'
+  - name: 'showpowernamehud.esm'
+    group: 'UI'
+  - name: 'showstarnames.esm'
+    group: 'User Interface'
+  - name: 'shutupcora.esm'
+    group: 'NPC Behaviour & Dialogue'
+  - name: 'skkcorpselooting.esm'
+    group: 'Gameplay Changes'
+  - name: 'smarterspacesuitautohide.esm'
+    group: 'Gameplay Changes'
+  - name: 'smarterspacesuitautohideoption2.esm'
+    group: 'Visuals'
+  - name: 'smooth 1st person boost pack.esm'
+    group: 'Gameplay Changes'
+  - name: 'Star UI Inventory.esm'
+    group: 'User Interface'
+  - name: 'starfield billboards and posters.esm'
+    group: 'Poster Replacers'
+  - name: 'starfieldcompendium.esm'
+    group: 'User Interface'
+    after: ['uiplaynice.esm']
+  - name: 'starfieldcompendiumimages.esm'
+    group: 'User Interface'
+    after: ['starfieldcompendium.esm']
+  - name: 'starluminous - lighting overhaul.esm'
+    group: 'Visuals'
+    inc: ['color filter remover.esm']
+  - name: 'StarUI Inventory.esm'
+    url:
+      - link: 'https://www.nexusmods.com/starfield/mods/773?tab=description'
+        name: 'StarUI Inventory'
+    group: 'User Interface'
+  - name: 'subtleflashlight - bluenospec.esm'
+    group: 'User Interface'
+  - name: 't-47 airspeeder.esm'
+    group: 'Vehicle Mods'
+  - name: 'thegangsallhere.esm'
+    group: 'Early Loaders'
+  - name: 'themidasmanor.esm'
+    group: 'Player Homes'
+  - name: 'vanilla flashlight improved.esm'
+    group: 'UI'
