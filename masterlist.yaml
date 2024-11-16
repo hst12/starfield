@@ -616,3 +616,10 @@ plugins:
 ###### 3RD Party Patches ######
 
 ###### Anything new can go after this (If you're not sure where to put it) ######
+
+###### Vehicles - New ######
+name: 'grav_79_z.esm'
+url:
+  - link: 'https://creations.bethesda.net/en/starfield/details/569b05ba-0c48-4196-a240-7b26f80be34f'
+    name: 'GRAV-79 (Hovercraft Vehicle)'
+inc: ['bubegg.esm']
