@@ -624,6 +624,20 @@ url:
     name: 'GRAV-79 (Hovercraft Vehicle)'
 inc: ['bubegg.esm']
 
+name: 'bubegg.esm'
+url:
+  - link: 'https://creations.bethesda.net/en/starfield/details/9320bd94-1eaf-408d-b614-52dce852db6d'
+    name: 'Sub-Orbital Shuttle SOS-8'
+inc: ['grav_79_z.esm']
+
+name: 'akiracer.esm'
+url:
+  - link: 'https://creations.bethesda.net/en/starfield/details/110b7f99-d1eb-4cf8-9031-dda8ec17efc2'
+    name: 'AkiRacer'
+inc:
+  - 'grav_79_z.esm'
+  - 'bubegg.esm'
+
 ###### Vehicles - Mods to Existing Vehicles ######
 
 ###### Ship Vendor Framework ######
