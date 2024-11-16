@@ -350,6 +350,49 @@ groups:
   - name: &lateChangesGroup Late Fixes & Changes
     after: [ *dynamicPatchGroup ]
 
+  - name: 'NPC Behaviour & Dialogue'
+    after:
+      - Gameplay Changes
+  - name: 'User Interface'
+    after:
+      - Poster Replacers
+  - name: 'SVF Ships'
+    after:
+      - Ship Vendor Framework
+  - name: 'Ship Vendor Framework'
+    after:
+      - Ship Modules
+  - name: 'Armour and Clothing Replacers'
+    after:
+      - New clothing or armour
+  - name: 'NPC Appearance'
+    after:
+      - Low Priority Overrides
+  - name: 'Gameplay Changes'
+    after:
+      - Vehicles - New
+  - name: 'New clothing or armour'
+    after:
+      - NPC Appearance
+  - name: 'Vehicles - New'
+    after:
+      - Core Mods
+  - name: 'Audio Replacers'
+    after:
+      - Visual Effects
+  - name: 'Ship Modules'
+    after:
+      - Player Homes
+  - name: 'Visual Effects'
+    after:
+      - User Interface
+  - name: 'Poster Replacers'
+    after:
+      - "NPC Behaviour & Dialogue"
+  - name: 'Player Homes'
+    after:
+      - Early Loaders
+
 plugins:
 ###### Official Game Files ######
   - name: 'Starfield.esm'
@@ -659,7 +702,6 @@ plugins:
     group: 'Gameplay Changes'
   - name: 'deluxedynamicboostpacks.esm'
     group: 'Gameplay Changes'
-    after: ['starfield billboards and posters.esm']
   - name: 'easy_temples.esm'
     group: 'Gameplay Changes'
   - name: 'eit_clothiers_z.esm'
@@ -692,7 +734,6 @@ plugins:
   - name: 'improvedfollowerbehavior.esm'
     group: 'NPC Behaviour & Dialogue'
     after:
-      - 'thegangsallhere.esm'
       - 'shutupcora.esm'
       - 'byecora.esm'
   - name: 'Infinite Car Boost.esm'
