@@ -623,3 +623,26 @@ url:
   - link: 'https://creations.bethesda.net/en/starfield/details/569b05ba-0c48-4196-a240-7b26f80be34f'
     name: 'GRAV-79 (Hovercraft Vehicle)'
 inc: ['bubegg.esm']
+
+###### Vehicles - Mods to Existing Vehicles ######
+
+###### Ship Vendor Framework ######
+name: 'shipvendorframework.esm'
+url:
+  - link: 'https://www.nexusmods.com/starfield/mods/10057'
+    name: 'Ship Vendor Framework'
+
+###### Ship Vendor Framework - New Ships ######
+name: 'hstships.esm'
+url:
+  - link: 'https://www.nexusmods.com/starfield/mods/10834'
+    name: 'Ships by hst using Ship Vendor Framework'
+  - link: 'https://creations.bethesda.net/en/starfield/details/4463fcf3-3834-4d4b-80c5-3ea2ecbeafd3'
+    name: 'Ships by hst using Ship Vendor Framework'
+after: ['shipvendorframework.esm']
+req:
+  - name: 'shipvendorframework.esm'
+    display: 'Ship Vendor Framework'
+msg:
+  - type: say
+    content: 'Requires Ship Vendor Framework'
